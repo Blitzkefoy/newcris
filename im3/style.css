@@ -1,0 +1,243 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #67291a;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures the logo is on the left, and the nav is on the right */
+}
+
+/* Logo styling */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 60px !important; /* Force height with !important if necessary */
+    max-height: 60px; /* Ensures the logo doesn't exceed this height */
+    width: 80px;
+    display: block;
+}
+
+.header-logo h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Navigation styling */
+nav {
+    flex: 1; /* Allows the nav to take up available space */
+    display: flex;
+    justify-content: flex-end; /* Aligns the nav items to the right */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #67291a;
+    border-radius: 4px;
+}
+
+/* Home Section */
+.hero {
+    padding: 20px 10px; /* Increase padding slightly for a bit more spacing */
+    text-align: center; /* Center-align the text */
+    background-image: url('crispic.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 20vh; /* Decreased height to move the text upwards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 5px; /* Further reduce the margin to decrease space */
+    max-width: 800px;
+    margin: 0 auto; /* Center the h1 text */
+    color: #67291a;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto; /* Center the paragraph */
+    color: #67291a; /* Keep a slightly off-white color for better readability */
+}
+
+/* Carousel Section */
+/* Carousel Section */
+.carousel {
+    width: 100%;
+    max-height: 1200px; /* Adjusted height for the image */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 1200px;
+    object-fit: contain; /* Changed to 'contain' to display the entire image */
+    height: 1200px; /* Adjusted height */
+    flex: 0 0 100%;
+    background-color: #f4f4f4; /* Optional: Background color to fill any empty space */
+}
+
+/* Rooms Section */
+/* Rooms Section */
+.room-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center; /* Center-align the content in the section */
+}
+
+.room-section h1 {
+    font-size: 3rem; /* Increase the size for the "Our Rooms" heading */
+    margin-bottom: 20px;
+    color: #67291a; /* Change to match the theme if desired */
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centers the grid items */
+}
+
+.room {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the image and text inside each room box */
+}
+
+.room img {
+    width: auto;
+    height: 800px; /* Adjust to the desired height */
+    max-width: 100%; /* Ensures it doesn’t exceed the box width */
+    object-fit: cover; /* Ensures the image fills the set height while maintaining aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Adds space between the image and the text */
+}
+
+.room h2 {
+    font-size: 1.5rem;
+    color: #67291a;
+    margin: 10px 0;
+    text-align: center; /* Center-align the room titles */
+}
+
+.room p {
+    margin: 5px 0;
+    text-align: center; /* Center-align room descriptions */
+}
+
+
+/* Reservation Form */
+.reservation-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reservation-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reservation-form input, .reservation-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reservation-form input[type="submit"] {
+    background-color: #67291a;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.reservation-form input[type="submit"]:hover {
+    background-color: #67291a;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.contact-section p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #67291a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
